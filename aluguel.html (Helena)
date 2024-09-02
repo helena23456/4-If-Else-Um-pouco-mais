@@ -1,0 +1,42 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    Considere que uma pessoa deseja alugar uma bicicleta. O preço do aluguel para um dia é de R$ 15,00 (15).
+    Pergunte para o usuário por quantos dias ele ficará com a bicicleta.
+    - Se a pessoa ficar até 7 dias (inclusive) com a bicicleta, o custo diário não sofrerá alterações;
+    - Se a pessoa ficar mais de 7 dias com a bicicleta, o custo diário terá um desconto de 20%.
+    Apresente quantos dias a pessoa ficará com a bicicleta e também apresente o preço final que será cobrado pelo aluguel da bicicleta.
+    */
+
+    // Entrada de dados
+    const dias = parseInt(prompt("Quantos dias você ficará com a bicicleta?"), 10);
+    
+
+    // Processamento
+    const precoDiario = 15;
+let precoFinal;
+
+if (!isNaN(dias) && dias > 0) {
+    if (dias <= 7) {
+        precoFinal = dias * precoDiario;
+    } else {
+        const precoDiarioComDesconto = precoDiario * 0.8;
+        precoFinal = dias * precoDiarioComDesconto;
+    }
+} else {
+    precoFinal = null; // Para indicar que houve um erro na entrada
+}
+    
+
+    
+    // Saída de dados
+    if (precoFinal !== null) {
+    alert(`Você ficará com a bicicleta por ${dias} dias.`);
+    alert(`O preço final do aluguel será R$ ${precoFinal.toFixed(2)}.`);
+} else {
+    alert("Número de dias inválido. Por favor, insira um número positivo.");
+    }
+
+    
+
+</script>
