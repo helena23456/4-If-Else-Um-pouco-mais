@@ -9,15 +9,23 @@
     */
 
     // Entrada de dados
-    
+    let dias = parseInt(prompt("Por quantos dias você ficará com a bicicleta?"), 10);
 
     
     // Processamento
-    
+    const precoDiario = 15.00; 
+    const desconto = 0.20; 
+    let precoFinal;
+
+    if (dias <= 7) {
+    precoFinal = dias * precoDiario;
+    } else {
+    precoFinal = dias * precoDiario * (1 - desconto);
+    } 
 
     
     // Saída de dados
-
+    alert(`Você ficará com a bicicleta por ${dias} dias.\nO preço final do aluguel é R$ ${precoFinal.toFixed(2)}.`);
     
 
 </script>
