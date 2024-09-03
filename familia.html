@@ -11,15 +11,23 @@
     */
 
     // Entrada de dados
-    
+    let numeroDePessoas = parseInt(prompt("Quantas pessoas fazem parte da família?"), 10);
 
-    
     // Processamento
-    
+    let tipoVeiculo;
 
-    
+    if (numeroDePessoas === 1 || numeroDePessoas === 2) {
+        tipoVeiculo = "Hatch Pequeno";
+    } else if (numeroDePessoas === 3 || numeroDePessoas === 4) {
+        tipoVeiculo = "Hatch Médio";
+    } else if (numeroDePessoas === 5) {
+        tipoVeiculo = "Sedan Médio";
+    } else {
+        tipoVeiculo = "SUV";
+    } 
+
     // Saída de dados
-
+    alert(`Para uma família de ${numeroDePessoas} pessoas, o tipo de veículo recomendado é: ${tipoVeiculo}.`);
     
 
 </script>
