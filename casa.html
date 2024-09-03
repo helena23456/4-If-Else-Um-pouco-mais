@@ -10,14 +10,24 @@
     */
 
     // Entrada de dados
-    
+    let valorTerreno = parseFloat(prompt("Informe o valor do terreno (R$):"));
+    let anos = parseInt(prompt("Em quantos anos você pagará o financiamento?"), 10);
 
-    
     // Processamento
-    
-
-    
+    const desconto5 = 0.05; 
+    const acrescimo15 = 0.15; 
+    const acrescimo30 = 0.30; 
+   
+    let valorFinal;
+    if (anos <= 5) {
+        valorFinal = valorTerreno * (1 - desconto5);
+    } else if (anos <= 10) {
+        valorFinal = valorTerreno * (1 + acrescimo15);
+    } else {
+        valorFinal = valorTerreno * (1 + acrescimo30);
+    }
     // Saída de dados
+    
 
     
 
